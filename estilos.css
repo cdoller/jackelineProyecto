@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
 .navbar {
   background-color: #F28775;
+  height: 100px;
 }
 .navbar .jumbotron {
   height: 100%;
@@ -9,42 +10,45 @@
 }
 
 .jumbotron {
-  background-image: url(./images/ima_portada.jpg);
+  background-image: url(./images/ima_portada2.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   color: #ffffff;
-  height: 80vh;
+  height: calc(100vh - 100px);
   border-radius: 0px;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
-.jumbotron .jumbotron p {
-  font-size: 24px;
+.jumbotron h1 {
+  font-size: 80px;
+  padding: 0 0 20px 80px;
+  font-weight: 700;
+}
+.jumbotron p {
+  width: auto;
+  margin-left: 70px;
+  padding: 5px 10px;
+  font-size: 26px;
   color: #F9F6E4;
-  -webkit-animation-direction: initial;
-          animation-direction: initial;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-direction: initial;
+  animation-duration: 3s;
+  background-color: rgba(0, 0, 0, 0.82);
 }
 
 h2 {
+  height: 60px;
+  box-sizing: border-box;
   text-align: center;
   background-color: #F28775;
   color: #F9D9C0;
   padding: 10px;
   margin-bottom: 0;
-  -webkit-animation-name: example;
-          animation-name: example;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
-@-webkit-keyframes example {
-  from {
-    background-color: rgb(255, 255, 255);
-  }
-  to {
-    background-color: #F9D9C0;
-  }
+  animation-name: example;
+  *animation-duration: 2s;
 }
 
 @keyframes example {
@@ -56,78 +60,93 @@ h2 {
   }
 }
 .aboutme {
-  height: 600px;
+  height: calc(100vh - 60px);
   width: 100%;
   background: #F9D9C0;
   margin-bottom: 0;
   margin-top: 0;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .sec1 {
-  height: 800px;
+  height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .afoto {
-  background-image: url(/images/imagen\ home.png);
-  background-size: cover;
-  height: 600px;
+  background-image: url(images/imagen\ home.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80%;
 }
 
 .atexto, .carousel-inner {
-  text-align: center;
+  *text-align: center;
   color: #F28775;
-  padding-top: 15px;
   margin-bottom: 0;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
-  height: 100%;
+  margin-inline-end: 0px;
   line-height: 1.5rem;
 }
 .atexto p, .carousel-inner p {
   text-align: justify;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .carousel-inner {
-  position: center;
-  padding: 40px;
+  padding: 10px 0;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .contenedorcta {
-  height: 100%;
-  box-sizing: inherit;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgb(0, 0, 0)), url(images/imagenCustomer.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 60px);
+  *box-sizing: border-box;
   display: inline-block;
   float: none;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
 }
 .contenedorcta p {
   display: block;
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   text-rendering: optimizeLegibility;
 }
 
 .sec2 {
-  height: 400px;
+  height: 97%;
+  *background-color: blue;
+  padding: 5px;
+  margin: 5px;
 }
 
 .textsec2 {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
-
-.fotosec2 {
-  background-image: url(/images/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg);
-  background-size: cover;
-  height: 100%;
+.textsec2 h3 {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.textsec2 p {
+  margin-bottom: 40px;
+  letter-spacing: 0.7px;
+  line-height: 25px;
+  background-color: rgba(156, 156, 156, 0.03);
 }
 
 .footer {
@@ -161,10 +180,8 @@ h2 {
 .jumbotronpod p {
   font-size: 20px;
   color: #F28775;
-  -webkit-animation-direction: initial;
-          animation-direction: initial;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-direction: initial;
+  animation-duration: 3s;
   padding-left: 20px;
   padding-right: 20%;
   display: block;
@@ -186,12 +203,12 @@ img {
 
 .btn--block {
   display: block;
-  width: 100%;
   background-color: #F9D9C0;
   border: 1.5px solid rgb(218, 212, 212);
   border-radius: 20px;
-  height: 30px;
-  color: #ffffff;
+  height: 40px;
+  padding: 5px 20px;
+  color: #272727;
 }
 
 .cards {
@@ -313,10 +330,8 @@ img {
 .jumbotronrec p {
   font-size: 20px;
   color: #F28775;
-  -webkit-animation-direction: initial;
-          animation-direction: initial;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-direction: initial;
+  animation-duration: 3s;
   margin-left: 20px;
   padding-right: 700px;
 }
@@ -456,10 +471,8 @@ img {
 .jumbotronmis p {
   font-size: 20px;
   color: #ffffff;
-  -webkit-animation-direction: initial;
-          animation-direction: initial;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-direction: initial;
+  animation-duration: 3s;
   padding-left: 20px;
   padding-right: 600px;
 }
@@ -485,10 +498,8 @@ img {
 .jumbotronconta p {
   font-size: 20px;
   color: #ffffff;
-  -webkit-animation-direction: initial;
-          animation-direction: initial;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-direction: initial;
+  animation-duration: 3s;
   padding-left: 20px;
   padding-right: 600px;
 }
@@ -506,4 +517,11 @@ img {
   background-color: #F28775;
   border: radius 30px;
   margin-bottom: 10px;
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+.carousel-item {
+  height: 150px;
+}
+.carousel-item img {
+  height: 150px;
+}
