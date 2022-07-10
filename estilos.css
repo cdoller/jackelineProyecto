@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
-.navbar {
-  background-color: #F28775;
-  height: 100px;
-}
-
 .jumbotron {
   background-image: url(./images/ima_portada2.png);
   background-size: cover;
@@ -32,27 +27,6 @@
   background-color: rgba(242, 135, 117, 0.6);
 }
 
-@media (max-width: 576px) {
-  .jumbotron {
-    margin: 0;
-    padding: 0 0 40px 0;
-  }
-  .jumbotron h1 {
-    font-size: 40px;
-    padding: 0 0 5px 10px;
-    font-weight: 700;
-  }
-  .jumbotron p {
-    width: auto;
-    margin: 0;
-    padding: 5px 10px;
-    font-size: 15px;
-    color: #F9F6E4;
-    animation-direction: initial;
-    animation-duration: 3s;
-    background-color: rgba(242, 135, 117, 0.6);
-  }
-}
 h2 {
   height: 60px;
   line-height: 40px;
@@ -66,11 +40,6 @@ h2 {
   font-weight: 700;
 }
 
-@media (max-width: 540px) {
-  h2 {
-    font-size: 15px;
-  }
-}
 @keyframes example {
   from {
     background-color: rgb(255, 255, 255);
@@ -114,28 +83,6 @@ h2 {
   font-size: 24px;
 }
 
-@media (max-width: 767px) {
-  .aboutme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .aboutme .afoto {
-    height: 38vh;
-  }
-  .aboutme .atexto, .aboutme .carousel-inner {
-    color: #F28775;
-    margin-bottom: 0;
-    margin-inline-end: 0px;
-    line-height: 1.3rem;
-  }
-  .aboutme .atexto p, .aboutme .carousel-inner p {
-    *text-align: justify;
-    font-size: 16px;
-    padding: 5px 2px;
-  }
-}
 .carousel-inner {
   padding: 10px 0;
   text-align: center;
@@ -187,30 +134,6 @@ h2 {
   background-color: rgba(156, 156, 156, 0.03);
 }
 
-@media (max-width: 767px) {
-  .contenedorcta {
-    background-image: linear-gradient(to top, rgba(136, 136, 136, 0.5), rgb(0, 0, 0)), url(images/imagenCustomer.jpg);
-  }
-  .contenedorcta .espacioCustomer {
-    display: none;
-  }
-  .contenedorcta .textsec2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  .contenedorcta .textsec2 h3 {
-    font-size: 22px;
-    padding-bottom: 20px;
-  }
-  .contenedorcta .textsec2 p {
-    margin-bottom: 10px;
-    letter-spacing: 0.7px;
-    line-height: 20px;
-    background-color: rgba(156, 156, 156, 0.03);
-  }
-}
 .footer {
   height: 100px;
   background-color: #F28775;
@@ -650,5 +573,76 @@ img {
     font-size: 12px;
     margin: 0 2px 0;
     padding: 0 2px 0 2px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .jumbotron {
+    margin: 0;
+    padding: 0 0 40px 0;
+  }
+  .jumbotron h1 {
+    font-size: 40px;
+    padding: 0 0 5px 10px;
+    font-weight: 700;
+  }
+  .jumbotron p {
+    width: auto;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #F9F6E4;
+    animation-direction: initial;
+    animation-duration: 3s;
+    background-color: rgba(242, 135, 117, 0.6);
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .aboutme .afoto {
+    height: 38vh;
+  }
+  .aboutme .atexto, .aboutme .carousel-inner {
+    color: #F28775;
+    margin-bottom: 0;
+    margin-inline-end: 0px;
+    line-height: 1.3rem;
+  }
+  .aboutme .atexto p, .aboutme .carousel-inner p {
+    *text-align: justify;
+    font-size: 16px;
+    padding: 5px 2px;
+  }
+
+  .contenedorcta {
+    background-image: linear-gradient(to top, rgba(3, 2, 2, 0.704), rgba(242, 136, 117, 0.784)), url(images/imagenCustomer.jpg);
+    color: #ffffff;
+  }
+  .contenedorcta .espacioCustomer {
+    display: none;
+  }
+  .contenedorcta .textsec2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .contenedorcta .textsec2 h3 {
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+  .contenedorcta .textsec2 p {
+    margin-bottom: 10px;
+    letter-spacing: 0.7px;
+    line-height: 20px;
+    background-color: rgba(156, 156, 156, 0.03);
   }
 }
