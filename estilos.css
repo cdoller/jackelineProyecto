@@ -3,11 +3,6 @@
   background-color: #F28775;
   height: 100px;
 }
-.navbar .jumbotron {
-  height: 100%;
-  width: 550px;
-  margin-bottom: 0px;
-}
 
 .jumbotron {
   background-image: url(./images/ima_portada2.png);
@@ -16,12 +11,12 @@
   background-position: center;
   color: #ffffff;
   height: calc(100vh - 100px);
-  border-radius: 0px;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 .jumbotron h1 {
   font-size: 80px;
@@ -34,23 +29,48 @@
   padding: 5px 10px;
   font-size: 26px;
   color: #F9F6E4;
-  animation-direction: initial;
-  animation-duration: 3s;
-  background-color: rgba(0, 0, 0, 0.82);
+  background-color: rgba(242, 135, 117, 0.6);
 }
 
+@media (max-width: 576px) {
+  .jumbotron {
+    margin: 0;
+    padding: 0 0 40px 0;
+  }
+  .jumbotron h1 {
+    font-size: 40px;
+    padding: 0 0 5px 10px;
+    font-weight: 700;
+  }
+  .jumbotron p {
+    width: auto;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #F9F6E4;
+    animation-direction: initial;
+    animation-duration: 3s;
+    background-color: rgba(242, 135, 117, 0.6);
+  }
+}
 h2 {
   height: 60px;
+  line-height: 40px;
   box-sizing: border-box;
   text-align: center;
   background-color: #F28775;
-  color: #F9D9C0;
+  color: #ffffff;
   padding: 10px;
   margin-bottom: 0;
   animation-name: example;
-  *animation-duration: 2s;
+  font-weight: 700;
 }
 
+@media (max-width: 540px) {
+  h2 {
+    font-size: 15px;
+  }
+}
 @keyframes example {
   from {
     background-color: rgb(255, 255, 255);
@@ -84,7 +104,6 @@ h2 {
 }
 
 .atexto, .carousel-inner {
-  *text-align: center;
   color: #F28775;
   margin-bottom: 0;
   margin-inline-end: 0px;
@@ -95,6 +114,28 @@ h2 {
   font-size: 24px;
 }
 
+@media (max-width: 767px) {
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .aboutme .afoto {
+    height: 38vh;
+  }
+  .aboutme .atexto, .aboutme .carousel-inner {
+    color: #F28775;
+    margin-bottom: 0;
+    margin-inline-end: 0px;
+    line-height: 1.3rem;
+  }
+  .aboutme .atexto p, .aboutme .carousel-inner p {
+    *text-align: justify;
+    font-size: 16px;
+    padding: 5px 2px;
+  }
+}
 .carousel-inner {
   padding: 10px 0;
   text-align: center;
@@ -123,39 +164,88 @@ h2 {
   margin-inline-end: 0px;
   text-rendering: optimizeLegibility;
 }
-
-.sec2 {
+.contenedorcta .sec2 {
   height: 97%;
-  *background-color: blue;
   padding: 5px;
   margin: 5px;
 }
-
-.textsec2 {
+.contenedorcta .textsec2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.textsec2 h3 {
+.contenedorcta .textsec2 h3 {
   font-size: 30px;
   font-weight: 700;
   padding-bottom: 20px;
 }
-.textsec2 p {
+.contenedorcta .textsec2 p {
   margin-bottom: 40px;
   letter-spacing: 0.7px;
   line-height: 25px;
   background-color: rgba(156, 156, 156, 0.03);
 }
 
+@media (max-width: 767px) {
+  .contenedorcta {
+    background-image: linear-gradient(to top, rgba(136, 136, 136, 0.5), rgb(0, 0, 0)), url(images/imagenCustomer.jpg);
+  }
+  .contenedorcta .espacioCustomer {
+    display: none;
+  }
+  .contenedorcta .textsec2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .contenedorcta .textsec2 h3 {
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+  .contenedorcta .textsec2 p {
+    margin-bottom: 10px;
+    letter-spacing: 0.7px;
+    line-height: 20px;
+    background-color: rgba(156, 156, 156, 0.03);
+  }
+}
 .footer {
   height: 100px;
   background-color: #F28775;
   width: 100%;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
   text-align: center;
   color: #ffffff;
+  box-sizing: border-box;
+}
+.footer .footerRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.footer .footerRow a {
+  text-decoration: none;
+  color: #272727;
+}
+.footer .footerRow .redes {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footerRow .textofooter {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footerRow .textofooter ul {
+  margin: 0 2px 0;
+  padding: 0 10px 0 10px;
 }
 
 .jumbotronpod {
@@ -524,4 +614,41 @@ img {
 }
 .carousel-item img {
   height: 150px;
+}
+
+@media (max-width: 540px) {
+  .carousel-item {
+    height: 80px;
+  }
+  .carousel-item img {
+    height: 80px;
+  }
+
+  .footer .footerRow {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+  }
+  .footer .footerRow a {
+    text-decoration: none;
+    color: #272727;
+  }
+  .footer .footerRow .redes {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .footerRow .textofooter {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footerRow .textofooter ul {
+    font-size: 12px;
+    margin: 0 2px 0;
+    padding: 0 2px 0 2px;
+  }
 }
